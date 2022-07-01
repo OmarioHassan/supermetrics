@@ -1,0 +1,40 @@
+.basic-form {
+  border: 1px solid transparent;
+  max-width: 400px;
+  text-align: center;
+  padding: 30px 50px;
+  box-shadow: 0 2px 2px 1px var(--gray);
+  border-radius: var(--radius);
+}
+
+.basic-form__title {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.basic-form__element:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.basic-form__element label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.basic-form__element input {
+  width: 100%;
+  padding: 10px 0;
+  text-indent: 10px;
+  border: 1px solid var(--gray);
+  border-radius: var(--radius);
+}
+
+.basic-form__submit {
+  color: #fff;
+  border: 0;
+  background: var(--red);
+  padding: 10px 35px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}

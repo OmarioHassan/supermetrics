@@ -1,0 +1,17 @@
+.post-card {
+  border: 1px solid var(--gray);
+  border-top: 0;
+  border-radius: var(--radius);
+
+  box-shadow: 0 2px 2px 1px var(--gray);
+}
+
+.post-card p:first-child {
+  background: var(--red);
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+.post-card p:last-child {
+  padding: 20px;
+}

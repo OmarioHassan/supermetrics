@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Navigate } from "react-router-dom";
+import "./App.css";
 
+// Pages
+import Login from "./pages/Login/Login";
+import PostList from "./pages/PostsList/PostList";
 function App() {
+  const isLoggedIn = localStorage.getItem("user_token");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Routes>
+        <Route
+          path="/"
+          element={
+            isLoggedIn ? <Navigate to="/posts" /> : <Navigate to="/login" />
+          }
+        ></Route>
+        <Route
+          path="/posts"
+          element={isLoggedIn ? undefined : <Navigate to="/login" />}
         >
-          Learn React
-        </a>
-      </header>
+          <Route path="" element={<PostList />} />
+        </Route>
+
+        <Route
+          path="/login"
+          element={isLoggedIn ? <Navigate to="/" /> : <Login />}
+        />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
     </div>
   );
 }

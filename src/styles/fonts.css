@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(./../assets/fonts/Roboto/Roboto-Regular.ttf) format("truetype"),
+    url(./../assets/fonts/Roboto/Roboto-Medium.ttf) format("truetype"),
+    url(./../assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Open_Sans";
+  src: url(./../assets/fonts/Open_Sans/OpenSans-Regular.ttf) format("truetype"),
+    url(./../assets/fonts/Open_Sans/OpenSans-Medium.ttf) format("truetype"),
+    url(./../assets/fonts/Open_Sans/OpenSans-Bold.ttf) format("truetype");
+}
+
+* {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open_Sans", Courier, monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", Courier, monospace;
+}
